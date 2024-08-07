@@ -1,0 +1,44 @@
+{
+  "name": "tetris-vscode",
+  "displayName": "Tetris",
+  "description": "Tetris Port in VSCode",
+  "version": "0.0.6",
+  "publisher": "HarryHopkinson",
+  "repository": "https://github.com/Harry-Hopkinson/tetris-vscode",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "tetris",
+    "games",
+    "vscode",
+    "tetris-vscode",
+    "fun"
+  ],
+  "icon": "images/icon.png",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "tetris.start-game",
+        "title": "Start Tetris Game"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^16.18.34",
+    "@types/vscode": "^1.73.0",
+    "typescript": "^5.3.2"
+  }
+}
